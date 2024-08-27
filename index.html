@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+
+    <style>
+
+        .bouncing {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .blueball, .redball, .yellowball{
+          width: 50px;
+          height: 50px;
+
+          border-radius: 50px;
+
+          margin-top: 20%;
+          margin-left: 2%;
+          margin-right: 2%;
+        
+          animation-name: bounce;
+          animation-duration: 1s;
+          animation-timing-function: ease-in-out;    
+          animation-iteration-count: infinite;
+
+        }
+
+        .blueball {
+          background-color: blue;
+          animation-delay: 0s;
+        }
+
+        .redball {
+          background-color: red;
+          animation-delay: 0.2s;
+        }
+
+        .yellowball {
+          background-color: yellow;
+          animation-delay: 0.4s;
+        }
+
+        @keyframes bounce {  
+            50% {
+                transform: translate(0,-100px);
+            }
+        }
+
+        .loading{
+          display: flex;
+          justify-content: center;
+        }
+
+        .green1, .green2, .green3{
+          background-color: greenyellow;
+          width: 30px;
+          height: 30px;
+
+          border-radius: 50px;
+
+          margin-top: 10%;
+          margin-left: 4%;
+          margin-right: 2%;
+
+          animation: loading 1s ease-in-out infinite;
+        }
+
+        .green1{
+          animation-delay: 0.2s;
+        }
+
+        .green2{
+          animation-delay: 0.4s;
+        }
+
+        .green3{
+          animation-delay: 0.4s;
+        }
+
+        @keyframes loading {
+          0%{
+            transform: scale(1.5);
+            background-color: red;
+          }
+          50%{
+            transform:scale(1)
+          }
+          100%{
+            transform: scale(0.9);
+          }
+
+
+          
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+<div class="bouncing">
+  <div class="blueball"></div>
+  <div class="redball"></div>  
+  <div class="yellowball"></div>   
+</div>
+
+<div class="loading">
+  <div class="green1"></div>
+  <div class="green2"></div>
+  <div class="green3"></div>
+</div>
+    
+</body>
+</html>
